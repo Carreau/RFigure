@@ -2,6 +2,8 @@ import numpy
 import os
 
 from pytest import mark
+import matplotlib
+matplotlib.use('Qt5Agg')
 
 dir,_ = os.path.split(__file__)
 filepath_testfile=os.path.join(dir,'./Test.rfig3')

@@ -4,7 +4,10 @@ python:
 # command to install dependencies
 install:
   - pip install pyqt5
+  - python -c 'import PyQt5.QtCore' &&
+      echo 'PyQt5 is available' ||
+      echo 'PyQt5 is not available'
   - pip install --quiet .
 # command to run tests
 script:
-  - py.test --no-qt
+  - py.test
